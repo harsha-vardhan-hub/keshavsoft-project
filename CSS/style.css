@@ -1,0 +1,35 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(13,110,253,0.7), rgba(13,110,253,0.7)),
+                url('https://images.unsplash.com/photo-1492724441997-5dc865305da7') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.feature-box, .card, .p-4 {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-box:hover, .card:hover, .hover-zoom:hover, .p-4:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Scroll Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
